@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria CSS</title>
+    <style>
+        /* Pseudo clases*/
+        button{
+            background-color: brown;
+        }
+        button:hover{
+            background-color: blue;
+            font-size: 15px;
+        }
+
+        /*LOs pseudelementos*/
+        /*Permiten crear partes virtuales de un elemento(etiqueta)*/
+
+        p{
+            color: blue;
+
+        }
+        p::before{
+            content: " X" ;
+            color: green;
+        }
+        p::after{
+            content: "P";
+            color: peru;
+            font-size: 28px;
+
+          
+        }
+        /*selectores combinados*/
+        /* Selectores decendientes*/
+
+        article{
+            background-color: aquamarine;
+
+        }
+
+        article h2{
+            color: orange;
+
+        }
+        article strong{
+            color: chocolate;
+        }
+        /*Selectores de Multiples selectores*/
+        h1,h3,em {
+            border: 5px solid salmon;
+        }
+        /*Herencia*/
+        body{
+            color: blue;
+        }
+        button{
+            color: white  ;
+        }
+        a{
+            color: inherit;
+        }
+        /*Decide  que que estilo gana cuando hay conflictos. Depende del orden, especialidad*/
+        header{
+            color: violet;
+        }
+        #cabecera{
+            color: blue;
+        }
+        .texto{
+            color: red;
+        }
+        /*Unidades de medida*/
+        /*
+        Absolutas:px.cm,in
+
+        relativas: em,rem,%,vm,vh (+ moderna y felxibl  es)
+        */
+
+
+    </style>
+</head>
+<body>
+    <button>Click aqui</button>
+
+    <p>Texto especiial</p>
+
+    <article>
+        <h2>Bienvenido</h2>
+        <strong>Hola a todos</strong>
+    </article>
+
+    <section>
+        <h1>Titulo</h1>
+        <h2>subtitulo</h2>
+        <h3>Otro subtitulo</h3>
+        <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit voluptate molestias sequi neque in sunt architecto odit mollitia, excepturi molestiae adipisci dolorem voluptas earum saepe minima. Odit, veritatis quibusdam.</strong>
+
+        <em>texto de enfasis</em>
+        <a href="">Soy un link</a>
+
+    </section>
+    <header id="cabecera" class="texto">
+        ¿De que color soy?
+    </header>
+</body>
+</html>

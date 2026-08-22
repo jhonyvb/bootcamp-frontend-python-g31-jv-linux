@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - modelo de caja</title>
+    <style>
+        .caja{
+            background-color: orange;
+            width: 200px;
+            height: 50px;
+
+            border: 5px solid red;
+            padding: 10px;
+            margin: 10px; 
+            padding: 20px 10px 20px 10px;
+
+            box-sizing: content-box; /* Valor por defecto, Deja que nostros calculemos el ancho de la caja incluye ancho alto,padding borde , margin*/
+            box-sizing: border-box;/*Deja que el navegador haga el calculo  el ancho de la caja incluye ancho alto,padding borde , margin*/
+        }
+        .bloque{
+            background-color: lightcoral;
+            display: block;
+
+        
+        }
+        .enlinea{
+            background-color: aquamarine;
+            display: inline;
+        }
+        .enlinea_bloque{
+            background-color: burlywood;
+            display: inline-block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="caja">"Modelo de caja"</div>
+    <div class="bloque">BLOQUE</div>
+    <div class="enlinea">ENLINEA1</div>
+    <div class="enlinea">ENLINEA2</div>
+    <div class="enlinea_bloque">ENLINEA Y BLOQUE</div>
+    <span>peru</span>
+</body>
+</html>

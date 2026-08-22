@@ -1,0 +1,22 @@
+/*a
+font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif;
+*/
+
+/* GENERALES */
+
+/* Selector universal */
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 14px; /* 16px es el valor por defecto */
+}
+body{
+  background-color: hsl(218,28%,13%);
+
+}
+ 

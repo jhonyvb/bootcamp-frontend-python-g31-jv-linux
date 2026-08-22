@@ -1,0 +1,25 @@
+body{
+    background-color: peru;
+}
+p{
+    color: blue;
+}
+h5{
+    background-color: aqua;
+    font-size: 50px;
+
+}
+
+#parrafo{
+    background-color: yellow;
+    font-size: 20px;
+}
+.btn{
+    background-color: brown;
+}
+.texto_resaltado{
+    color: blue;
+}
+.btn_verde{
+    background-color: cadetblue;
+}
