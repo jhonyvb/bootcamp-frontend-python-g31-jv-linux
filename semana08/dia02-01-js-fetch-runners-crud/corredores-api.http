@@ -1,0 +1,33 @@
+### Listar a todos los corredores
+
+GET https://apibox.vercel.app/mxoRxINQFH2Bgl6chvTe5lEleNBWWHbV/api/marathon
+
+### Crear un corredor
+POST https://apibox.vercel.app/mxoRxINQFH2Bgl6chvTe5lEleNBWWHbV/api/marathon
+Content-Type: application/json
+
+{
+    "nombre": "Nikita",
+    "edad": 63,
+    "categoria": "42K",
+    "dorsal":"199"
+}
+
+### Obtener la informacion de un corredor
+
+GET https://apibox.vercel.app/mxoRxINQFH2Bgl6chvTe5lEleNBWWHbV/api/marathon/c6a15425-1d0c-40b2-aa70-6b6ee95e6a1b
+
+### Borrar un corredor
+
+DELETE https://apibox.vercel.app/mxoRxINQFH2Bgl6chvTe5lEleNBWWHbV/api/marathon/daef8c12-a11b-4481-8fab-4ca30fa42fac
+
+### Actualizar un corredor
+PUT https://apibox.vercel.app/mxoRxINQFH2Bgl6chvTe5lEleNBWWHbV/api/marathon/c2ce6e3b-9a32-4c6d-926e-f68983e769b0
+Content-Type: application/json
+
+{
+    "nombre": "Nikol",
+    "edad": 36,
+    "categoria": "10K",
+    "dorsal":"111"
+}
