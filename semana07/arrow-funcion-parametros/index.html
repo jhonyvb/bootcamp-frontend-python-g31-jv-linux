@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // parametros rest
+        function suma(...rest){
+            console.log('rest',rest)
+
+            for(let index=0;index<rest.length;index++){
+                console.log(rest[index])
+            }
+        }
+        suma(1,2,3,4)
+
+        //
+      function restar(a,b,c,d){
+        console.log("parametros",a,b,c,d)
+      }
+      restar(...[0,1,2,3])
+      
+      
+      const obj ={
+        name:'Cesar',
+        age:6
+       }
+
+      const obj2={
+        ...obj,
+        lastname:'verano'
+      } 
+      console.log('obj2',obj2)
+
+      const ar=[0,1,2,3];
+      const ar2=[9,8,7];
+      const total= [...ar, ...ar2]
+      console.log('total',total)
+      </script>
+</body>
+</html>
