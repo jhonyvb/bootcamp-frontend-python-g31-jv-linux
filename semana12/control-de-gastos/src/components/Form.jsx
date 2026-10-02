@@ -32,7 +32,6 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
     if (!formData.concepto || !formData.monto || !formData.categoria || !formData.fecha) {
       alert("Por favor, completa todos los campos del gasto")
       return
@@ -55,45 +54,45 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-12 border border-neutral-200 bg-white rounded-xl p-6 w-full md:w-80 shrink-0 h-fit"
+      className="mb-12 border border-slate-200/80 bg-white rounded-2xl p-6 w-full md:w-80 shrink-0 h-fit shadow-sm"
     >
-      <p className="font-mono text-[11px] uppercase tracking-widest text-neutral-400 mb-4">
+      <p className="font-mono text-[11px] uppercase tracking-widest text-emerald-600 font-bold mb-4">
         {editingGasto ? "Editar Gasto" : "Nuevo Gasto"}
       </p>
 
       <div className="flex flex-col gap-4 mb-6">
-        <label className="block text-xs text-neutral-500">
+        <label className="block text-xs font-semibold text-slate-600">
           Concepto / Servicio
           <input
             id="concepto"
             type="text"
             value={formData.concepto}
             onChange={handleChange}
-            placeholder="Suscripción Netflix, Almuerzo..."
-            className="w-full border-b border-neutral-200 bg-transparent py-2 text-sm outline-none focus:border-neutral-900 transition-colors"
+            placeholder="Ej: Netflix, Almuerzo..."
+            className="w-full mt-1 border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50/50 outline-none focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 transition-all"
           />
         </label>
 
-        <label className="block text-xs text-neutral-500">
-          Monto (S/.)
+        <label className="block text-xs font-semibold text-slate-600">
+          Monto (S/)
           <input
             id="monto"
             type="number"
             step="0.01"
             value={formData.monto}
             onChange={handleChange}
-            placeholder="25.50"
-            className="w-full border-b border-neutral-200 bg-transparent py-2 text-sm font-mono outline-none focus:border-neutral-900 transition-colors"
+            placeholder="0.00"
+            className="w-full mt-1 border border-slate-200 rounded-xl px-3 py-2 text-sm font-mono bg-slate-50/50 outline-none focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 transition-all"
           />
         </label>
 
-        <label className="block text-xs text-neutral-500">
+        <label className="block text-xs font-semibold text-slate-600">
           Categoría
           <select
             id="categoria"
             value={formData.categoria}
             onChange={handleChange}
-            className="w-full border-b border-neutral-200 bg-transparent py-2 text-sm outline-none focus:border-neutral-900 transition-colors"
+            className="w-full mt-1 border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50/50 outline-none focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 transition-all"
           >
             <option value="">Seleccionar</option>
             <option value="Alimentación">Alimentación</option>
@@ -104,7 +103,7 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
           </select>
         </label>
 
-        <label className="block text-xs text-neutral-500">
+        <label className="block text-xs font-semibold text-slate-600">
           Día / Fecha
           <input
             id="fecha"
@@ -112,7 +111,7 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
             value={formData.fecha}
             onChange={handleChange}
             placeholder="Ej: 15 Sep o Hoy"
-            className="w-full border-b border-neutral-200 bg-transparent py-2 text-sm outline-none focus:border-neutral-900 transition-colors"
+            className="w-full mt-1 border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50/50 outline-none focus:border-emerald-500 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 transition-all"
           />
         </label>
       </div>
@@ -121,7 +120,7 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-neutral-900 text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-neutral-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-full bg-emerald-600 text-white text-sm font-semibold px-6 py-2.5 rounded-xl hover:bg-emerald-700 transition-all shadow-md shadow-emerald-600/20 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {editingGasto ? "Guardar cambios" : "Registrar gasto"}
         </button>
@@ -130,7 +129,7 @@ const Form = ({ onCreate, onUpdate, editingGasto, setEditingGasto, loading }) =>
           <button
             type="button"
             onClick={handleCancel}
-            className="text-sm text-neutral-400 hover:text-neutral-900 transition-colors"
+            className="text-xs text-slate-400 hover:text-slate-800 transition-colors"
           >
             Cancelar edición
           </button>

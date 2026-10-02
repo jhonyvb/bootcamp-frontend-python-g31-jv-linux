@@ -4,6 +4,7 @@ import Form from "./components/Form"
 import List from "./components/List"
 import Footer from "./components/Footer"
 
+
 const App = () => {
   const [gastos, setGastos] = useState([])
   const [editingGasto, setEditingGasto] = useState(null)
@@ -93,7 +94,9 @@ const App = () => {
   const totalMonto = gastos.reduce((acc, curr) => acc + (parseFloat(curr.monto) || 0), 0)
 
   return (
-    <div className="min-h-screen bg-neutral-50 text-neutral-900 flex flex-col justify-between">
+    // En el div principal de App.jsx, cambia:
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between">
+    
       <main className="max-w-2xl w-full mx-auto px-6 py-16">
         <Header totalMonto={totalMonto} cantidadGastos={gastos.length} />
 
